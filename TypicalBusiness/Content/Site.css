@@ -1,19 +1,86 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 20px;
 }
 
+p{
+    text-align: center;
+}
+
+h1{
+    text-align:center;
+}
+h2{
+    text-align:center;
+}
+h3{
+    text-align:center;
+}
+
+.jumbotron{
+    
+   position: relative;
+   padding-top: 40px;
+   background: url("Images/jumboPic.jpg") no-repeat center center;
+   background-size: 100% 100%;
+   -moz-background-size: 100% 100%;
+   -webkit-background-size: 100% 100%;
+   -o-background-size: 100% 100%;
+   min-height:500px;
+   margin-bottom:0;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #bdbdbd    
+}
+
+.btn-primary {
+    background-color: #40666d;
+    border: none;
+    color: #fff;
+    padding: 11px 36px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.bg-grey{
+    background-color: #f3f3f3
+}
+
+.main{
+    margin-top:170px;
+    color: black;
+}
+
+.lead{
+    font-size: 25px;
+}
+
+.opening{
+    position:relative;
+    height:450px;
+    width: 100%;
+}
+
+.opening-text{
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 50px;
+    width: 60%;
+    text-align:center;
+
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+    
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -21,4 +88,23 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/*the following can be used if responsive designs are required for wider screens*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .container {
+        width: 1465px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        width: 1760px;
+    }
 }
