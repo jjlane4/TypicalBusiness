@@ -173,6 +173,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\placeHolder.png" />
     <Content Include="Content\Images\jumboPic.jpg" />
     <Content Include="Content\Images\employeesImage.jpg" />
     <Content Include="Content\Images\ideaImage.jpg" />
