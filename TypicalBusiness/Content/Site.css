@@ -24,11 +24,11 @@ h2{
    -webkit-background-size: 100% 100%;
    -o-background-size: 100% 100%;
    min-height:500px;
-   margin-bottom:0;
+  
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-    background-color: #bdbdbd    
+    background-color: #bdbdbd;   
 }
 
 .btn-primary {
@@ -41,8 +41,10 @@ h2{
     margin-top: 20px;
 }
 
-.bg-grey{
-    background-color: #f3f3f3
+.bg-grey {
+    background-color: #e9e7e7;
+    border-top:solid;
+    border-top-color:#bdbdbd;
 }
 
 .main{
@@ -72,11 +74,17 @@ h2{
 }
 
 .opening-image{
-    margin-top:30px;
-    margin-bottom:30px;
+    text-align:center;
+    margin-top:50px;
+    margin-bottom: 80px;
 }
 
-
+.bg-grey-columns{
+    position:relative;
+    text-align:center;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {

@@ -8,11 +8,13 @@ namespace TypicalBusiness.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("Home/Index")]
         public ActionResult Index()
         {
             return View();
         }
-
+       
+        [Route("Home/About")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +22,7 @@ namespace TypicalBusiness.Controllers
             return View();
         }
 
+        [Route("Home/Contact")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -27,6 +30,7 @@ namespace TypicalBusiness.Controllers
             return View();
         }
 
+        [Route("Home/Services")]
         public ActionResult Services()
         {
             ViewBag.Message = "Your Services page";
@@ -34,6 +38,7 @@ namespace TypicalBusiness.Controllers
             return View();
         }
 
+        [Route("Home/Career")]
         public ActionResult Career()
         {
             ViewBag.Message = "Your Career page";
