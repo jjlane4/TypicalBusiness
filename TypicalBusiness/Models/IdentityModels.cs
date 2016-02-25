@@ -29,5 +29,7 @@ namespace TypicalBusiness.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TypicalBusiness.Models.Job> Jobs { get; set; }
     }
 }

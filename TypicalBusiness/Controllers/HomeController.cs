@@ -9,6 +9,7 @@ namespace TypicalBusiness.Controllers
     public class HomeController : Controller
     {
         [Route("Home/Index")]
+        [LayoutInjecter("_IndexLayout")]
         public ActionResult Index()
         {
             return View();
