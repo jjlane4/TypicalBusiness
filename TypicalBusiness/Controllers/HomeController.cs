@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TypicalBusiness.Models;
 
 namespace TypicalBusiness.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+
         [Route("Home/Index")]
         [LayoutInjecter("_IndexLayout")]
         public ActionResult Index()
@@ -44,7 +48,7 @@ namespace TypicalBusiness.Controllers
         {
             ViewBag.Message = "Your Career page";
 
-            return View();
+            return View(db.Jobs.ToList());
         }
 
 

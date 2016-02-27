@@ -14,7 +14,7 @@ namespace TypicalBusiness.Models
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Jobs
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
             return View(db.Jobs.ToList());
@@ -36,7 +36,7 @@ namespace TypicalBusiness.Models
         }
 
         // GET: Jobs/Create
-        [Authorize]
+        //[Authorize]
         public ActionResult Create()
         {
             return View();
@@ -60,7 +60,7 @@ namespace TypicalBusiness.Models
         }
 
         // GET: Jobs/Edit/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -92,7 +92,7 @@ namespace TypicalBusiness.Models
         }
 
         // GET: Jobs/Delete/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
