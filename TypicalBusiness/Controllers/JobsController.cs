@@ -47,7 +47,7 @@ namespace TypicalBusiness.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "JobID,Title")] Job job)
+        public ActionResult Create([Bind(Include = "JobID,Title,Description")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace TypicalBusiness.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "JobID,Title")] Job job)
+        public ActionResult Edit([Bind(Include = "JobID,Title, Description")] Job job)
         {
             if (ModelState.IsValid)
             {

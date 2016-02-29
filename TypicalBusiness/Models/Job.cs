@@ -11,5 +11,7 @@ namespace TypicalBusiness.Models
         public int JobID { get; set; }
         
         public String Title { get; set; }
+
+        public String Description { get; set; }
     }
 }
