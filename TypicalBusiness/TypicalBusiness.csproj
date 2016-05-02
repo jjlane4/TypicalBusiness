@@ -177,10 +177,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-TypicalBusiness-20160219093646.mdf" />
-    <Content Include="App_Data\aspnet-TypicalBusiness-20160219093646_log.ldf">
-      <DependentUpon>aspnet-TypicalBusiness-20160219093646.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
@@ -279,7 +275,9 @@
     <Content Include="Views\Jobs\Index.cshtml" />
     <Content Include="Views\Shared\_IndexLayout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
