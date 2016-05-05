@@ -15,9 +15,28 @@ namespace TypicalBusiness.Models
 
         // GET: Jobs
         //[Authorize]
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Jobs.ToList());
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var jobs = from j in db.Jobs select j;
+
+            switch (sortOrder)
+            {
+                case "title_desc" :
+                    jobs = jobs.OrderByDescending(j => j.Title);
+                    break;
+                case "Date" :
+                    jobs = jobs.OrderBy(j => j.DateCreated);
+                    break;
+                case "date_desc" :
+                    jobs = jobs.OrderByDescending(j => j.DateCreated);
+                    break;
+                default:
+                    jobs = jobs.OrderBy(j => j.Title);
+                    break;
+            }
+            return View(jobs.ToList());
         }
 
         // GET: Jobs/Details/5

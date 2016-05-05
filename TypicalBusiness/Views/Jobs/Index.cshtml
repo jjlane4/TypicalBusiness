@@ -4,30 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.ActionLink("Job Title", "Index", new { sortOrder = ViewBag.TitleSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateSortParm })
+            </th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.JobID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.JobID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.JobID })
-        </td>
-    </tr>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.JobID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.JobID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.JobID })
+            </td>
+        </tr>
+    }
+
+    </table>
 }
-
-</table>
